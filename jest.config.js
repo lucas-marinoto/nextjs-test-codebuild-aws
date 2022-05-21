@@ -14,5 +14,14 @@ module.exports = {
   moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx'],
   testMatch: ['**/*.(test|spec).(js|jsx|ts|tsx)'],
   testEnvironment: 'jsdom',
-  reporters: ['default', ['jest-junit', { suiteName: 'jest tests' }]],
+  reporters: [
+    'default',
+    [
+      'jest-junit',
+      {
+        outputDirectory: 'reports-junit-aws',
+        outputName: 'aws-report-tests.xml',
+      },
+    ],
+  ],
 }
